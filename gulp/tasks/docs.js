@@ -6,7 +6,7 @@ var panini = require('panini');
 var supercollider = require('supercollider');
 
 var PANINI_CONFIG = {
-  root: 'docs/pages/',
+  root: 'docs/pages/ru/',
   layouts: 'docs/layout/',
   partials: ['docs/partials/', 'node_modules/foundation-docs/templates/partials/'],
   helpers: foundationDocs.handlebarsHelpers,
@@ -27,7 +27,7 @@ supercollider
     handlebars: foundationDocs.handlebars,
     keepFm: true,
     quiet: false,
-    pageRoot: 'docs/pages',
+    pageRoot: 'docs/pages/ru',
     data: {
       repoName: 'foundation-sites',
       editBranch: 'develop'
