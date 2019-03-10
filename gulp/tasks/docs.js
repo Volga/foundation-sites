@@ -48,7 +48,7 @@ gulp.task('docs:search', function (done) {
 
 // Assembles the modified layout, pages, and partials in the docs folder
 gulp.task('docs:pages', function() {
-  return gulp.src('docs/pages/**/*')
+  return gulp.src('docs/pages/ru/*')
     .pipe(newer({
       dest: '_build',
       ext: '.html'
@@ -65,7 +65,7 @@ gulp.task('docs:pages', function() {
 gulp.task('docs:pages:all', function() {
   panini.refresh();
 
-  return gulp.src('docs/pages/**/*')
+  return gulp.src('docs/pages/ru/*')
     .pipe(supercollider.init())
     .pipe(panini(PANINI_CONFIG))
     .pipe(cacheBust({
