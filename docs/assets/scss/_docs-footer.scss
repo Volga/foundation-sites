@@ -1,8 +1,7 @@
 .footer-nav {
-  @include flex-grid-row;
   align-items: center;
   background-color: $topbar-background;
-  padding: 2rem;
+  padding: .5rem;
   width: 100%;
   justify-content: center;
 

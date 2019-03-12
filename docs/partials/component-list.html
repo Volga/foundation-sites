@@ -8,144 +8,143 @@
   </ul>
 -->
 
-  <ul class="accordion docs-nav-category" data-accordion data-allow-all-closed="true" data-multi-expand="true">
-    <a class="docs-expand-all" data-expand-all="true"></a>
+  <ul class="accordion docs-nav-category" data-accordion>
     <li class="accordion-item {{#ifpage 'index' 'installation' 'starter-projects' 'compatibility' 'accessibility' 'kitchen-sink'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Getting Started</a>
+      <a href="#" class="accordion-title">Приступая к работе</a>
       <div class="accordion-content {{#ifpage 'index' 'installation' 'starter-projects' 'compatibility' 'accessibility' 'kitchen-sink'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'index'}} class="current"{{/ifpage}}><a href="index.html">Welcome</a></li>
-          <li{{#ifpage 'installation'}} class="current"{{/ifpage}}><a href="installation.html">Installation</a></li>
-          <li{{#ifpage 'starter-projects'}} class="current"{{/ifpage}}><a href="starter-projects.html">Starter Projects</a></li>
-          <li{{#ifpage 'compatibility'}} class="current"{{/ifpage}}><a href="compatibility.html">Compatibility</a></li>
-          <li{{#ifpage 'accessibility'}} class="current"{{/ifpage}}><a href="accessibility.html">Accessibility</a></li>
-          <li{{#ifpage 'kitchen-sink'}} class="current"{{/ifpage}}><a href="kitchen-sink.html">Kitchen Sink</a></li>
+          <li{{#ifpage 'index'}} class="current"{{/ifpage}}><a href="index.html">Добро пожаловать</a></li>
+          <li{{#ifpage 'installation'}} class="current"{{/ifpage}}><a href="installation.html">Установка</a></li>
+          <li{{#ifpage 'starter-projects'}} class="current"{{/ifpage}}><a href="starter-projects.html">Стартовые Проекты</a></li>
+          <li{{#ifpage 'compatibility'}} class="current"{{/ifpage}}><a href="compatibility.html">Совместимость</a></li>
+          <li{{#ifpage 'accessibility'}} class="current"{{/ifpage}}><a href="accessibility.html">Доступность</a></li>
+          <li{{#ifpage 'kitchen-sink'}} class="current"{{/ifpage}}><a href="kitchen-sink.html">Элементы</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'global' 'rtl' 'flexbox-mode' 'sass' 'javascript' 'javascript-utilities' 'media-queries'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Setup</a>
+      <a href="#" class="accordion-title">Настройки</a>
       <div class="accordion-content {{#ifpage 'global' 'rtl' 'flexbox-mode' 'sass' 'javascript' 'javascript-utilities' 'media-queries'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'global'}} class="current"{{/ifpage}}><a href="global.html">Global Styles</a></li>
-          <li{{#ifpage 'rtl'}} class="current"{{/ifpage}}><a href="rtl.html">Right-to-Left Support</a></li>
-          <li{{#ifpage 'flexbox-mode'}} class="current"{{/ifpage}}><a href="flexbox-mode.html">Flexbox Mode</a></li>
+          <li{{#ifpage 'global'}} class="current"{{/ifpage}}><a href="global.html">Глобальные стили</a></li>
+          <li{{#ifpage 'rtl'}} class="current"{{/ifpage}}><a href="rtl.html">Поддержка RTL</a></li>
+          <li{{#ifpage 'flexbox-mode'}} class="current"{{/ifpage}}><a href="flexbox-mode.html">Режим Flexbox</a></li>
           <li{{#ifpage 'sass'}} class="current"{{/ifpage}}><a href="sass.html">Sass</a></li>
           <li{{#ifpage 'javascript'}} class="current"{{/ifpage}}><a href="javascript.html">JavaScript</a></li>
-          <li{{#ifpage 'javascript-utilities'}} class="current"{{/ifpage}}><a href="javascript-utilities.html">JavaScript Utilities</a></li>
-          <li{{#ifpage 'media-queries'}} class="current"{{/ifpage}}><a href="media-queries.html">Media Queries</a> <span class="label">JS</span></li>
+          <li{{#ifpage 'javascript-utilities'}} class="current"{{/ifpage}}><a href="javascript-utilities.html">JavaScript утилиты</a></li>
+          <li{{#ifpage 'media-queries'}} class="current"{{/ifpage}}><a href="media-queries.html">Медиа Запросы</a> <span class="label">JS</span></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'xy-grid' 'grid' 'flex-grid' 'forms'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">General</a>
+      <a href="#" class="accordion-title">Главное</a>
       <div class="accordion-content {{#ifpage 'xy-grid' 'grid' 'flex-grid' 'forms'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'xy-grid'}} class="current"{{/ifpage}}><a href="xy-grid.html">XY Grid <span class="label">New</span></a></li>
-          <li{{#ifpage 'grid'}} class="current"{{/ifpage}}><a href="grid.html">Float Grid<span class="label">Legacy</span></a></li>
-          <li{{#ifpage 'flex-grid'}} class="current"{{/ifpage}}><a href="flex-grid.html">Flex Grid<span class="label">Legacy</span></a></li>
-          <li{{#ifpage 'forms'}} class="current"{{/ifpage}}><a href="forms.html">Forms</a></li>
+          <li{{#ifpage 'xy-grid'}} class="current"{{/ifpage}}><a href="xy-grid.html">XY Сетка<span class="label">Новинка</span></a></li>
+          <li{{#ifpage 'grid'}} class="current"{{/ifpage}}><a href="grid.html">Плавающая сетка<span class="label">Наследие</span></a></li>
+          <li{{#ifpage 'flex-grid'}} class="current"{{/ifpage}}><a href="flex-grid.html">Flex сетка<span class="label">Наследие</span></a></li>
+          <li{{#ifpage 'forms'}} class="current"{{/ifpage}}><a href="forms.html">Формы</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'prototyping-utilities' 'flexbox-utilities' 'visibility' 'float-classes'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Utilities</a>
+      <a href="#" class="accordion-title">Утилиты</a>
       <div class="accordion-content {{#ifpage 'prototyping-utilities' 'flexbox-utilities' 'visibility' 'float-classes'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'prototyping-utilities'}} class="current"{{/ifpage}}><a href="prototyping-utilities.html">Prototyping Utilities</a></li>
-          <li{{#ifpage 'flexbox-utilities'}} class="current"{{/ifpage}}><a href="flexbox-utilities.html">Flexbox Utilities</a></li>
-          <li{{#ifpage 'visibility'}} class="current"{{/ifpage}}><a href="visibility.html">Visibility Classes</a></li>
-          <li{{#ifpage 'float-classes'}} class="current"{{/ifpage}}><a href="float-classes.html">Float Classes</a></li>
+          <li{{#ifpage 'prototyping-utilities'}} class="current"{{/ifpage}}><a href="prototyping-utilities.html">Утилиты прототипирования</a></li>
+          <li{{#ifpage 'flexbox-utilities'}} class="current"{{/ifpage}}><a href="flexbox-utilities.html">Flexbox утилиты</a></li>
+          <li{{#ifpage 'visibility'}} class="current"{{/ifpage}}><a href="visibility.html">Классы Видимости</a></li>
+          <li{{#ifpage 'float-classes'}} class="current"{{/ifpage}}><a href="float-classes.html">Плавающие классы</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'typography-base' 'typography-helpers'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Typography</a>
+      <a href="#" class="accordion-title">Типография</a>
       <div class="accordion-content {{#ifpage 'typography-base' 'typography-helpers'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'typography-base'}} class="current"{{/ifpage}}><a href="typography-base.html">Base Styles</a></li>
-          <li{{#ifpage 'typography-helpers'}} class="current"{{/ifpage}}><a href="typography-helpers.html">Helper Classes</a></li>
+          <li{{#ifpage 'typography-base'}} class="current"{{/ifpage}}><a href="typography-base.html">Базовые стили</a></li>
+          <li{{#ifpage 'typography-helpers'}} class="current"{{/ifpage}}><a href="typography-helpers.html">Вспомогательные классы</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'button' 'button-group' 'close-button' 'slider' 'switch'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Controls</a>
+      <a href="#" class="accordion-title">Элементы управления</a>
       <div class="accordion-content {{#ifpage 'button' 'button-group' 'close-button' 'slider' 'switch'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'button'}} class="current"{{/ifpage}}><a href="button.html">Button</a></li>
-          <li{{#ifpage 'button-group'}} class="current"{{/ifpage}}><a href="button-group.html">Button Group</a></li>
-          <li{{#ifpage 'close-button'}} class="current"{{/ifpage}}><a href="close-button.html">Close Button</a></li>
-          <li{{#ifpage 'slider'}} class="current"{{/ifpage}}><a href="slider.html">Slider <span class="label">JS</span></a></li>
-          <li{{#ifpage 'switch'}} class="current"{{/ifpage}}><a href="switch.html">Switch</a></li>
+          <li{{#ifpage 'button'}} class="current"{{/ifpage}}><a href="button.html">Кнопка</a></li>
+          <li{{#ifpage 'button-group'}} class="current"{{/ifpage}}><a href="button-group.html">Группа кнопок</a></li>
+          <li{{#ifpage 'close-button'}} class="current"{{/ifpage}}><a href="close-button.html">Кнопка закрытия</a></li>
+          <li{{#ifpage 'slider'}} class="current"{{/ifpage}}><a href="slider.html">Слайдер <span class="label">JS</span></a></li>
+          <li{{#ifpage 'switch'}} class="current"{{/ifpage}}><a href="switch.html">Переключатель</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'navigation' 'menu' 'dropdown-menu' 'drilldown-menu' 'accordion-menu' 'top-bar' 'responsive-navigation' 'magellan' 'pagination' 'breadcrumbs'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Navigation</a>
+      <a href="#" class="accordion-title">Навигация</a>
       <div class="accordion-content {{#ifpage 'navigation' 'menu' 'dropdown-menu' 'drilldown-menu' 'accordion-menu' 'top-bar' 'responsive-navigation' 'magellan' 'pagination' 'breadcrumbs'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'menu'}} class="current"{{/ifpage}}><a href="menu.html">Menu</a></li>
-          <li{{#ifpage 'dropdown-menu'}} class="current"{{/ifpage}}><a href="dropdown-menu.html">Dropdown Menu <span class="label">JS</span></a></li>
-          <li{{#ifpage 'drilldown-menu'}} class="current"{{/ifpage}}><a href="drilldown-menu.html">Drilldown Menu <span class="label">JS</span></a></li>
-          <li{{#ifpage 'accordion-menu'}} class="current"{{/ifpage}}><a href="accordion-menu.html">Accordion Menu <span class="label">JS</span></a></li>
-          <li{{#ifpage 'top-bar'}} class="current"{{/ifpage}}><a href="top-bar.html">Top Bar</a></li>
-          <li{{#ifpage 'responsive-navigation'}} class="current"{{/ifpage}}><a href="responsive-navigation.html">Responsive Navigation</a></li>
-          <li{{#ifpage 'magellan'}} class="current"{{/ifpage}}><a href="magellan.html">Magellan <span class="label">JS</span></a></li>
-          <li{{#ifpage 'pagination'}} class="current"{{/ifpage}}><a href="pagination.html">Pagination</a></li>
-          <li{{#ifpage 'breadcrumbs'}} class="current"{{/ifpage}}><a href="breadcrumbs.html">Breadcrumbs</a></li>
+          <li{{#ifpage 'menu'}} class="current"{{/ifpage}}><a href="menu.html">Меню</a></li>
+          <li{{#ifpage 'dropdown-menu'}} class="current"{{/ifpage}}><a href="dropdown-menu.html">Выпадающее меню <span class="label">JS</span></a></li>
+          <li{{#ifpage 'drilldown-menu'}} class="current"{{/ifpage}}><a href="drilldown-menu.html">Углубляющееся меню <span class="label">JS</span></a></li>
+          <li{{#ifpage 'accordion-menu'}} class="current"{{/ifpage}}><a href="accordion-menu.html">Меню-аккордеон <span class="label">JS</span></a></li>
+          <li{{#ifpage 'top-bar'}} class="current"{{/ifpage}}><a href="top-bar.html">Верхняя панель</a></li>
+          <li{{#ifpage 'responsive-navigation'}} class="current"{{/ifpage}}><a href="responsive-navigation.html">Адаптивная навигация</a></li>
+          <li{{#ifpage 'magellan'}} class="current"{{/ifpage}}><a href="magellan.html">Магеллан <span class="label">JS</span></a></li>
+          <li{{#ifpage 'pagination'}} class="current"{{/ifpage}}><a href="pagination.html">Постраничная навигация</a></li>
+          <li{{#ifpage 'breadcrumbs'}} class="current"{{/ifpage}}><a href="breadcrumbs.html">Хлебные крошки</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'accordion' 'callout' 'card' 'dropdown' 'media-object' 'off-canvas' 'reveal' 'table' 'tabs' 'responsive-accordion-tabs'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Containers</a>
+      <a href="#" class="accordion-title">Контейнеры</a>
       <div class="accordion-content {{#ifpage 'accordion' 'callout' 'card' 'dropdown' 'media-object' 'off-canvas' 'reveal' 'table' 'tabs' 'responsive-accordion-tabs'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'accordion'}} class="current"{{/ifpage}}><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
-          <li{{#ifpage 'callout'}} class="current"{{/ifpage}}><a href="callout.html">Callout</a></li>
-          <li{{#ifpage 'card'}} class="current"{{/ifpage}}><a href="card.html">Card</a></li>
-          <li{{#ifpage 'dropdown'}} class="current"{{/ifpage}}><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
-          <li{{#ifpage 'media-object'}} class="current"{{/ifpage}}><a href="media-object.html">Media Object</a></li>
-          <li{{#ifpage 'off-canvas'}} class="current"{{/ifpage}}><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
-          <li{{#ifpage 'reveal'}} class="current"{{/ifpage}}><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
-          <li{{#ifpage 'table'}} class="current"{{/ifpage}}><a href="table.html">Table</a></li>
-          <li{{#ifpage 'tabs'}} class="current"{{/ifpage}}><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
-          <li{{#ifpage 'responsive-accordion-tabs'}} class="current"{{/ifpage}}><a href="responsive-accordion-tabs.html">Responsive Accordion Tabs<span class="label">JS</span></a></li>
+          <li{{#ifpage 'accordion'}} class="current"{{/ifpage}}><a href="accordion.html">Аккордеон <span class="label">JS</span></a></li>
+          <li{{#ifpage 'callout'}} class="current"{{/ifpage}}><a href="callout.html">Сноска</a></li>
+          <li{{#ifpage 'card'}} class="current"{{/ifpage}}><a href="card.html">Карточка</a></li>
+          <li{{#ifpage 'dropdown'}} class="current"{{/ifpage}}><a href="dropdown.html">Выпадающий <span class="label">JS</span></a></li>
+          <li{{#ifpage 'media-object'}} class="current"{{/ifpage}}><a href="media-object.html">Медиа Объект</a></li>
+          <li{{#ifpage 'off-canvas'}} class="current"{{/ifpage}}><a href="off-canvas.html">Выпадающий холст <span class="label">JS</span></a></li>
+          <li{{#ifpage 'reveal'}} class="current"{{/ifpage}}><a href="reveal.html">Раскрывающийся <span class="label">JS</span> <small>Modal</small></a></li>
+          <li{{#ifpage 'table'}} class="current"{{/ifpage}}><a href="table.html">Таблица</a></li>
+          <li{{#ifpage 'tabs'}} class="current"{{/ifpage}}><a href="tabs.html">Табы <span class="label">JS</span></a></li>
+          <li{{#ifpage 'responsive-accordion-tabs'}} class="current"{{/ifpage}}><a href="responsive-accordion-tabs.html">Адаптивные табы аккордеон <span class="label">JS</span></a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'badge' 'responsive-embed' 'label' 'orbit' 'progress-bar' 'thumbnail' 'tooltip'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Media</a>
+      <a href="#" class="accordion-title">Медиа</a>
       <div class="accordion-content {{#ifpage 'badge' 'responsive-embed' 'label' 'orbit' 'progress-bar' 'thumbnail' 'tooltip'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'badge'}} class="current"{{/ifpage}}><a href="badge.html">Badge</a></li>
-          <li{{#ifpage 'responsive-embed'}} class="current"{{/ifpage}}><a href="responsive-embed.html">Responsive Embed</a></li>
-          <li{{#ifpage 'label'}} class="current"{{/ifpage}}><a href="label.html">Label</a></li>
-          <li{{#ifpage 'orbit'}} class="current"{{/ifpage}}><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
-          <li{{#ifpage 'progress-bar'}} class="current"{{/ifpage}}><a href="progress-bar.html">Progress Bar</a></li>
-          <li{{#ifpage 'thumbnail'}} class="current"{{/ifpage}}><a href="thumbnail.html">Thumbnail</a></li>
-          <li{{#ifpage 'tooltip'}} class="current"{{/ifpage}}><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
+          <li{{#ifpage 'badge'}} class="current"{{/ifpage}}><a href="badge.html">Бейдж</a></li>
+          <li{{#ifpage 'responsive-embed'}} class="current"{{/ifpage}}><a href="responsive-embed.html">Адаптивное содержимое</a></li>
+          <li{{#ifpage 'label'}} class="current"{{/ifpage}}><a href="label.html">Метка</a></li>
+          <li{{#ifpage 'orbit'}} class="current"{{/ifpage}}><a href="orbit.html">Orbit <span class="label">JS</span> <small>Карусель</small></a></li>
+          <li{{#ifpage 'progress-bar'}} class="current"{{/ifpage}}><a href="progress-bar.html">Прогресс-Бар </a></li>
+          <li{{#ifpage 'thumbnail'}} class="current"{{/ifpage}}><a href="thumbnail.html">Эскиз</a></li>
+          <li{{#ifpage 'tooltip'}} class="current"{{/ifpage}}><a href="tooltip.html">Подсказка <span class="label">JS</span></a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'abide' 'equalizer' 'interchange' 'toggler' 'smooth-scroll' 'sticky'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Plugins</a>
+      <a href="#" class="accordion-title">Плагины</a>
       <div class="accordion-content {{#ifpage 'abide' 'equalizer' 'interchange' 'toggler' 'smooth-scroll' 'sticky'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'abide'}} class="current"{{/ifpage}}><a href="abide.html">Abide <small>Form Validation</small></a></li>
-          <li{{#ifpage 'equalizer'}} class="current"{{/ifpage}}><a href="equalizer.html">Equalizer <small>Column Alignment</small></a></li>
-          <li{{#ifpage 'interchange'}} class="current"{{/ifpage}}><a href="interchange.html">Interchange <small>Responsive Content</small></a></li>
-          <li{{#ifpage 'toggler'}} class="current"{{/ifpage}}><a href="toggler.html">Toggler <small>CSS Helper</small></a></li>
-          <li{{#ifpage 'smooth-scroll'}} class="current"{{/ifpage}}><a href="smooth-scroll.html">Smooth Scroll <small>Navigation</small></a></li>
-          <li{{#ifpage 'sticky'}} class="current"{{/ifpage}}><a href="sticky.html">Sticky <small>Header/Sidebar</small></a></li>
+          <li{{#ifpage 'abide'}} class="current"{{/ifpage}}><a href="abide.html">Abide <small>Валидация форм</small></a></li>
+          <li{{#ifpage 'equalizer'}} class="current"{{/ifpage}}><a href="equalizer.html">Equalizer <small>Выравнивание столбцов</small></a></li>
+          <li{{#ifpage 'interchange'}} class="current"{{/ifpage}}><a href="interchange.html">Interchange <small>Адаптивное содержимое</small></a></li>
+          <li{{#ifpage 'toggler'}} class="current"{{/ifpage}}><a href="toggler.html">Toggler <small>CSS Хелпер</small></a></li>
+          <li{{#ifpage 'smooth-scroll'}} class="current"{{/ifpage}}><a href="smooth-scroll.html">Smooth Scroll <small>Навигация</small></a></li>
+          <li{{#ifpage 'sticky'}} class="current"{{/ifpage}}><a href="sticky.html">Sticky <small>Верхняя/Боковая панель</small></a></li>
         </ul>
       </div>
     </li>
@@ -154,31 +153,19 @@
       <a href="#" class="accordion-title">Sass</a>
       <div class="accordion-content {{#ifpage 'sass-functions' 'sass-mixins'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
-          <li{{#ifpage 'sass-functions'}} class="current"{{/ifpage}}><a href="sass-functions.html">Functions</a></li>
-          <li{{#ifpage 'sass-mixins'}} class="current"{{/ifpage}}><a href="sass-mixins.html">Mixins</a></li>
+          <li{{#ifpage 'sass-functions'}} class="current"{{/ifpage}}><a href="sass-functions.html">Функции</a></li>
+          <li{{#ifpage 'sass-mixins'}} class="current"{{/ifpage}}><a href="sass-mixins.html">Миксины</a></li>
         </ul>
       </div>
     </li>
 
     <li class="accordion-item {{#ifpage 'motion-ui' 'panini' 'style-sherpa'}}is-active{{/ifpage}}" data-accordion-item>
-      <a href="#" class="accordion-title">Libraries</a>
+      <a href="#" class="accordion-title">Библиотеки</a>
       <div class="accordion-content {{#ifpage 'motion-ui' 'panini' 'style-sherpa'}}is-active{{/ifpage}}" data-tab-content>
         <ul class="docs-nav-subcategory">
           <li{{#ifpage 'motion-ui'}} class="current"{{/ifpage}}><a href="motion-ui.html">Motion UI</a></li>
           <li{{#ifpage 'panini'}} class="current"{{/ifpage}}><a href="panini.html">Panini</a></li>
           <li{{#ifpage 'style-sherpa'}} class="current"{{/ifpage}}><a href="style-sherpa.html">Style Sherpa</a></li>
-        </ul>
-      </div>
-    </li>
-
-    <li class="accordion-item" data-accordion-item>
-      <a href="#" class="accordion-title">Older Versions</a>
-      <div class="accordion-content" data-tab-content>
-        <ul class="docs-nav-subcategory">
-          <li><a href="http://foundation.zurb.com/sites/docs/v/5.5.3/index.html">Foundation 5</a></li>
-          <li><a href="http://foundation.zurb.com/sites/docs/v/4.3.2/index.html">Foundation 4</a></li>
-          <li><a href="http://foundation.zurb.com/sites/docs/v/3.2.5/">Foundation 3</a></li>
-          <li><a href="http://foundation.zurb.com/sites/docs/v/2.2.1/">Foundation 2</a></li>
         </ul>
       </div>
     </li>
