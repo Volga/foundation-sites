@@ -1,12 +1,12 @@
 ---
-title: Installation
-description: There are many ways to install Foundation, but if you're just getting started, we have a few suggestions.
-video: '6KwsGcEHVTE'
+title: Установка
+description: В этом разделе приведены основные способы установки Foundation.
+#video: '6KwsGcEHVTE'
 ---
 
-## Install with Package Managers
+## Установка с помощью менеджера пакетов
 
-Foundation is available on npm, Bower, Meteor, and Composer. The package includes all of the source Sass and JavaScript files, as well as compiled CSS and JavaScript, in uncompressed and compressed flavors.
+Foundation доступен в репозитариях ряда менеджеров пакетов. Пакет содержит исходный код Sass и JavaScript, а также скомпилированный CSS и JavaScript, как в минифицированном, так и полном виде.
 
 <div class="grid-x grid-margin-x">
   <div class="cell small-2 text-right">
@@ -114,158 +114,151 @@ Foundation is available on npm, Bower, Meteor, and Composer. The package include
   </div>
 </div>
 
-Here's what comes in the package.
+Содержимое пакета:
 
 ```
-├─ scss       Source Sass files. Use this folder as a load path in Sass.
-├─ js         Source JavaScript files. If you're using a build system, make sure `foundation.core.js` is loaded first.
-└─ dist       Compiled files:
-   ├─ css        * Compiled CSS files. Includes minified and unminified files.
-   ├─ js         * Concatenated JavaScript files. Includes minified and unminified files.
-   └─ plugins    * Standalone JavaScript plugins.
+├─ scss       Исходные файлы Sass. Используйте эту директорию в качестве пути загрузки Sass.
+├─ js         Исхожные файлы JavaScript. Если вы используете сборщик, обязательно загрузите файл `foundation.core.js` первым.
+└─ dist       Скомпилированные файлы:
+   ├─ css        * Скомпилированные файлы CSS. Включает минифицированные и неминифицированные версии.
+   ├─ js         * Собранные файлы JavaScript. Включает минифицированные и неминифицированные версии.
+   └─ plugins    * Автономные плагины JavaScript.
 ```
 
 ---
 
-## Install with Foundation CLI
+## Установка из командной строки с помощью Foundation CLI
 
-Not a fan of GUIs? The Node-powered Foundation CLI can install the same template projects for you.
+С помощью NodeJS-утилиты Foundation CLI вы можете создать проект на основе одного из шаблонов.
 
-Install Foundation CLI:
+Установка Foundation CLI:
 
 ```bash
 npm install --global foundation-cli
-# or sudo npm install --global foundation-cli
+# или sudo npm install --global foundation-cli
 ```
 
 <div class="callout info">
-  Depending on how your machine is configured, the command may fail with an `EACCESS` error. To get around this, run the commands with `sudo` at the beginning.
+  В зависимости от настроек вашей машины, команда может потерпеть неудачу с ошибкой `EACCESS`. Чтобы обойти эту проблему, сначала выполните команду с `sudo`.
 </div>
 
-Then use to create a new Foundation project:
+Следующая команда создаст новый проект Foundation:
 
 ```bash
 foundation new
 ```
 
-After you selected "Foundation for Sites", Foundation CLI will ask you which template you want to use. You can choose between:
+После того как вы выберете "Foundation for Sites", Foundation CLI предложит на выбор шаблон проекта. Вы сможете выбрать между:
 
 <div class="grid-x grid-margin-x">
   <div class="cell small-6">
-    <h3>Basic template</h3>
+    <h3>Basic</h3>
     <p>
-      <b>Recommended for beginners</b><br>
-      A basic template to begin to use Foundation. It includes:
+      <b>Рекомендовано для новичков</b><br>
+      Базовый шаблон для начала использования Foundation. Он включает:
       <ul>
         <li>
-          Foundation for Sites pre-configured.
+          Преднастроенный Foundation for Sites.
         </li>
         <li>
-          Sass compilation<br>
-          A tool to convert your SASS/SCSS files to CSS.
+          Компилятор Sass<br>
+          Инструмент для конвертации ваших SASS/SCSS файлов в CSS.
         </li>
         <li>
-          Starter HTML file<br>
-          A basic file to help you to use basic Foundation component (including the new XY grid !)
+          Начальный файл HTML<br>
+          Базовый файл, который поможет вам использовать базовые компоненты Foundation (включая новую сетку XY !)
         </li>
       </ul>
     </p>
   </div>
 
   <div class="cell small-6">
-    <h3>ZURB template</h3>
+    <h3>ZURB</h3>
     <p>
-      <b>Recommended for experienced (or curious) users</b><br>
-      A more advanced project including Foundation and a build process with:
+      <b>Рекомендуется для опытных пользователей</b><br>
+      Более продвинутый шаблон, включающий Foundation и сборщик:
       <ul>
-        <li>Handlebars HTML templates with Panini</li>
-        <li>Sass compilation and prefixing</li>
-        <li>JavaScript module bundling with webpack</li>
-        <li>Built-in BrowserSync</li>
-        <li>Production build with CSS, Javascript and Image compression</li>
+        <li>Handlebars HTML-шаблоны с Panini</li>
+        <li>Sass компилятор и автопрефиксер</li>
+        <li>JavaScript сборщик webpack</li>
+        <li>Встроенный BrowserSync</li>
+        <li>Продакшн сборщик с CSS, Javascript и компрессией изображений</li>
       </ul>
     </p>
   </div>
 </div>
 
 <p class="text-center">
-  <a href="starter-projects.html" class="button">See advanced Template installations</a>
+  <a href="starter-projects.html" class="button">Больше об установке Шаблонов</a>
 </p>
 
 <div class="callout info">
-  <p><strong>Foundation 5 users</strong>: if you already have the Foundation 5 CLI on your machine, you will only be able to access one of the commands, depending on how your command line environment is configured.</p>
+  <p><strong>Пользователи Foundation 5</strong>: Если на вашей машине уже установлен Foundation 5 CLI, вы сможете получить доступ только к некоторым командам, в зависимости от настроек окружения вашей командной строки.</p>
 
-  <p>To remove the Foundation 5 CLI, run <code>gem uninstall foundation</code>. After testing the Foundation 6 CLI, if you want to remove it to go back to the old CLI, run <code>npm uninstall foundation-cli --global</code>.</p>
+  <p>Для удаления Foundation 5 CLI, запустите <code>gem uninstall foundation</code>. После тестирования Foundation 6 CLI, если вы пожелаете удалить его для того, чтобы вернуться к старому CLI, запустите <code>npm uninstall foundation-cli --global</code>.</p>
 </div>
 
 <div class="callout info">
-  <p><strong>Windows users</strong>: make sure you've python v2.7 available in your node environment since it's required by the node-gyp tool. There are two way to achieve this</p>
+  <p><strong>Пользователи Windows</strong>: имейте ввиду, что в вашем node окружении должен быть доступен python v2.7, т.к. он требуется для node-gyp. Есть 2 способа обеспечить это</p>
 
   <ol>
-    <li>Install the <a href="https://github.com/felixrieseberg/windows-build-tools">windows-build-tools</a> (recommended) and make python afterwards accessible via <code>npm config set python "%USERPROFILE%\.windows-build-tools\python27\python.exe"</code></li>
-    <li>Install <a href="https://www.python.org/downloads/">python</a> (not recommended) and add it to your system environment variables</li>
+    <li>Установить <a href="https://github.com/felixrieseberg/windows-build-tools">windows-build-tools</a> (рекомендуется) и после сделать Python доступным командой <code>npm config set python "%USERPROFILE%\.windows-build-tools\python27\python.exe"</code></li>
+    <li>Установить <a href="https://www.python.org/downloads/">python</a> (не рекомендуется) и добавить его в переменные окружения вашей системы</li>
   </ol>
  
-  <p>The first way is recommended if you've not installed python v2.7 yet as it doesn't affect your machine outside the node environment. In case you've already installed python v2.7 you may of course skip both ways and start using foundationc-cli immediately.</p>
+  <p>Первый способ рекомендуется в случае, если у вас не установлен python v2.7, т.к. такая установка не повлияет на вашу машину за пределами окружения node. В случае если у вас уже установлен python v2.7 вы можете сразу же начать использовать foundationc-cli.</p>
 </div>
 
 ---
 
-## Download
+## Скачивание
 
 <div class="grid-x grid-margin-x">
-  <div class="cell small-6">
-    <div class="responsive-embed widescreen mb1">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/lFrpnk0Oo_8" frameborder="0" allowfullscreen></iframe>
-      <a id="docs-mobile-video-link" class="docs-mobile-video" target="_blank" href="https://youtu.be/lFrpnk0Oo_8"></a>
-    </div>
-  </div>
-
-  <div class="cell small-6">
+  <div class="cell">
     <p>
-      If you aren't into Sass, we have a starter template with compiled CSS and JavaScript, as well as a starting `index.html` file for you to hack on. Just unzip and get coding!
+      Если вы не используете Sass, для вас есть стартовый шаблон с скомпилированным CSS и JavaScript и стартовым файлом `index.html` с примерами компонентов. Просто разархивируйте и начинайте работать!
     </p>
     <p class="text-center">
-      <a href="http://foundation.zurb.com/sites/download" class="button">Download Foundation</a>
+      <a href="http://foundation.zurb.com/sites/download" class="button">Скачать Foundation</a>
     </p>
   </div>
 </div>
 
 ---
 
-## CDN Links
+## Ссылки CDN
 
-The folks at [jsDelivr](https://www.jsdelivr.com) host the compressed Foundation CSS and JavaScript for us. Just drop one of these `<script>` tags into your HTML and you're set:
+Ребята из [jsDelivr](https://www.jsdelivr.com) предоставили нам место для сжатого Foundation CSS и JavaScript. Просто скопируйте следующие тэги в ваш HTML:
 
 ```html
-<!-- Compressed CSS -->
+<!-- Сжатый CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
 
-<!-- Compressed JavaScript -->
+<!-- Сжатый JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
 ```
 
-From Foundation 6.4, flex is enabled by default and **only the new XY Grid is available**. However, others CSS versions are available for backward compatibility and the most common usage cases. For others uses and advanced customization, we recommand to build Foundation with custom settings (see others installation methods).
+Начиная с Foundation 6.4, flex используется по умолчанию и как следствие **доступна только новая XY Сетка**. Для обратной совместимости и использования в наиболее распространенных кейсах имеются другие прекомпилированные версии CSS. Для остальных случаев и расширенной кастомизации, мы рекомендуем собирать Foundation с собственными настройками (смотрите другие методы установки).
 
 ```html
-<!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
+<!-- foundation-float.min.css: Сжатый CSS с поддержкой плавающей сетки -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation-float.min.css" integrity="sha256-TPcVVrzfTETpAWQ8HhBHIMT7+DbszMr5n3eFi+UwIl8= sha384-+aXh7XSzITwlvjelsNWuL1A9rT8pWGaiqMMeUjtKcsWIfzT1oV8Mp3oYxmjPK8Gv sha512-cArttU/Yh+PzfQ/dhCdfBiU9+su+fuCwFxLrlLbvuJE/ynUbstaKweVPs7Hdbok9jlv9cwt+xdk20wRz7oYErQ==" crossorigin="anonymous">
 
-<!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
+<!-- foundation-prototype.min.css: Сжатый CSS с классами прототипирования -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation-prototype.min.css" integrity="sha256-JyhZsgvsqjrdl9GPOILi/zyc+z4dcwXiyP1Q7cwWlM0= sha384-GtUT6gOaCY/S1ggTUOnqe5CQAEAZ6oVTmMq3X4vfZrvp+tLgjBEmwVxJnukor+o0 sha512-x3+KBxBjFh8PGncrfDOsJhntYDBFdJxmpb211THYkQOaGWvk7ckZG6prGUpZqz85AXgiispjow06+bDnIxnWDQ==" crossorigin="anonymous">
 
-<!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
+<!-- foundation-rtl.min.css: Сжатый CSS с поддержкой rtl -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation-rtl.min.css" integrity="sha256-Az+E7JXW71Srarkum5QPTdnobddg2GqI1i8+nMusgLk= sha384-eBKuNtkGVmsJD0uNnWoKYYVnzDT0PXV+XNyAgmmZwYVn7MSNcaR4i5HjOpSRd0o6 sha512-d0RjiDZM/0NlD+7Y2DhUGuAUdwDIL5lS3GPAD0HEayEcrhuLuRiPYOgFWZik+gsFzsykxSn0KO6jim7ev8kIig==" crossorigin="anonymous">
 ```
 
 <div class="text-center">
-  <a href="https://www.jsdelivr.com/package/npm/foundation-sites?path=dist" class="button" target="_blank">See all CDN files and versions</a>
+  <a href="https://www.jsdelivr.com/package/npm/foundation-sites?path=dist" class="button" target="_blank">Смотреть все версии и файлы CDN</a>
 </div>
 
 ---
 
-## HTML Starter Template
-Start with this HTML template and adapt it to your needs. Be sure to include the `.no-js` class on the `html` tag of your template.  Adding this class prevents [flash of unstyled content](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) for a number of foundation components.
+## Стартовый шаблон HTML
+Начните с использования этого шаблона HTML и адаптируйте его под свои нужды. Обратите внимание, что использование класса `.no-js` в тэге `html` обязательно. Добавление данного класса предотвращает возникновение эффекта [неоформленного контента (FOUC)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) для ряда компонентов foundation.
 
 ```html
 <!doctype html>
@@ -294,6 +287,6 @@ Start with this HTML template and adapt it to your needs. Be sure to include the
 
 ---
 
-## Other Integrations
+## Прочие интеграции
 
-The Foundation community has helped us integrate the framework into Rails, WordPress, Django, and more. Head to our [resources page](http://foundation.zurb.com/sites/resources) to find even more ways to use Foundation.
+Сообщество Foundation помогло нам интегрировать фреймврок в Rails, WordPress, Django, и многие другие. Для поиска возможных вариантов использования Foundation, обратитесь к нашей [странице ресурсов](http://foundation.zurb.com/sites/resources).

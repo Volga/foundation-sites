@@ -8,6 +8,10 @@
 // Feel free to submit pull requests to foundation-docs like you would Foundation itself!
 
 @import 'settings/settings';
+$offcanvas-sizes: (
+                    small: 100%,
+                    medium: 350px,
+                  );
 @import 'foundation';
 @import 'motion-ui';
 
@@ -22,6 +26,7 @@
 
 $foundation-dark: #074E68 ;
 $true-white: #fff;
+
 @import 'foundation-docs';
 @import 'content/install';
 @import 'examples/grid';
