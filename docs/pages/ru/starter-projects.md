@@ -1,131 +1,111 @@
 ---
-title: Starter Projects
-description: We have a few starter project templates that can be installed with the Foundation CLI. You can also download them manually!
-video: 'lFrpnk0Oo_8'
+title: Стартовые проекты
+description: У нас есть несколько шаблонов стартовых проектов, которые могут быть установлены с помощью Foundation CLI. Вы также можете скачать их вручную!
 ---
 
 
-Our project templates give you a solid... *Foundation* on which to start a new project. Both templates use the [Gulp](http://gulpjs.com) build system to automate the process of compiling Sass, processing JavaScript, copying files, and more.
+Наши стартовые шаблоны предоставят вам прочный... *Foundation (Фундамент)* для начала нового проекта. Оба шаблона используют систему сборки [Gulp](http://gulpjs.com) для автоматизации компиляции Sass, сборки JavaScript, копирования файлов и прочих процессов.
 
-## Basic Template
+## Базовый шаблон
 
-<div class="responsive-embed widescreen mb1">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ofSZUKkjPRY" frameborder="0" allowfullscreen></iframe>
-  <a id="docs-mobile-video-link" class="docs-mobile-video" target="_blank" href="https://youtu.be/ofSZUKkjPRY"></a>
-</div>
+Базовый проектный шаблон очень похож на шаблон Sass из Foundation 5. Проект имеет плоскую структуру директорий и компилирует только Sass. Он отлично подходит для быстрого создания простого проекта, использующего только Sass.
 
-Our basic project template is a lot like the Sass template from Foundation 5. The project has a flat directory structure and only compiles Sass. It's great if you want to quickly put together a simple project and only need to use Sass.
-
-You can set up a basic project through the Foundation CLI with this command:
+Вы можете установить базовый шаблон с помощью консольной команды Foundation CLI:
 
 ```bash
 foundation new --framework sites --template basic
 ```
 
-You can manually install the template with:
+Вы можете также вручную установить шаблон следующим образом:
  ```bash
-# Download the template with Git
+# Получите последнюю версию шаблона с Git
 git clone https://github.com/zurb/foundation-sites-template projectname
 
-# Move to the project folder, and install dependencies
+# Перейдите в директорию проекта и установите зависимости
 cd projectname
 npm install
 
-# Build the Sass files
+# Соберите Sass файлы
 npm start
 ```
 
-Your project will be recompiled every time you save a Sass file in `dist/.
+Проект будет автоматически перекомпилироваться при внесении изменений в Sass файлы директории `dist/`.
 
 ---
 
-## ZURB Template
+## Шаблон ZURB
 
-<div class="responsive-embed widescreen mb1">
-  <iframe id="zurb-template-starter" data-linkable-video="3Uj74uJ3GSQ" width="500" height="315" src="https://www.youtube.com/embed/3Uj74uJ3GSQ?enablejsapi=1" enablejsapi="1" frameborder="0" allowfullscreen ></iframe>
-  <a id="docs-mobile-video-link" class="docs-mobile-video" target="_blank" href="https://www.youtube.com/watch?v=3Uj74uJ3GSQ"></a>
-</div>
+Официальный шаблон ZURB Template включает в себя не только сборку Sass, но и сборку JavaScript, шаблонизатор Handlebars, и компрессию изображений. Мы используем этот шаблон в ZURB для наших клиентских проектов!
 
-The official ZURB Template includes not only Sass processing, but also JavaScript processing, Handlebars templating, and image compression. We use this exact template at ZURB for our client work!
-
-You can set up an advanced project through the Foundation CLI with this command:
+Вы можете установить этот продвинутый шаблон с помощью консольной команды Foundation CLI:
 
 ```bash
 foundation new --framework sites --template zurb
 ```
 
-You can manually install the template with:
+Вы можете также вручную установить шаблон следующим образом:
 ```bash
-# Download the ZURB template with Git
+# Получите последнюю версию шаблона с Git
 git clone https://github.com/zurb/foundation-zurb-template projectname
 
-# Move to the project folder, and install dependencies
+# Перейдите в директорию проекта и установите зависимости
 cd projectname
 npm install
 
-# Build the project
+# Соберите проект
 npm start
 ```
 
-Once compiled, you project is viewable at: <a class="button primary" href="http://localhost:8000" target="_blank">http://localhost:8000</a>
+Собранный проект будет доступен по следующему адресу: <a class="button primary" href="http://localhost:8000" target="_blank">http://localhost:8000</a>
 
-The biggest difference between this and the basic template is the folder structure. In the ZURB Template, your project has a `src/` folder which contains your source files, and a separate `dist/` folder with your finished website. As you work on your project, Gulp continuously updates your `dist/` folder with new versions of files. To compile a production build, run `npm run build`.
+Самым большим отличием этого и базового шаблона является структура директорий. В шаблоне ZURB, ваш проект имеет в составе директорию `src/` содержащую исходные файлы, и отделенную от директории `dist/` с конечным сайтом. По мере того, как вы работает со своим проектом, Gulp постоянно обновляет директорию `dist/` новыми версиями файлов. Для сборки продакшн версии, запустите `npm run build`.
 
-To override or add to the default styles of the ZURB Template, in your project's `src/assets/scss/` folder
- - Change Sass variables in `_settings.scss`
- - Add custom SCSS and css to new files in the `components` folder then import those files at the bottom of `app.scss`
+Для переопределения стилей по умолчанию или добавления собственных стилей в шаблон ZURB, в директории `src/assets/scss/` вашего проекта
+ - Измените переменные Sass в файле `_settings.scss`
+ - Добавьте свои SCSS/CSS файлы в директорию `components` и импортируйте их в конце файла `app.scss`
 
-The `_settings.scss` and `app.scss` files are not changed when upgrading an existing project. As a result, you must manually edit your `_settings.scss` file to incorporate any Sass changes found [in the release notes](https://github.com/zurb/foundation-sites/releases).
+Файлы `_settings.scss` и `app.scss` не изменяются при обновлении проекта. Как следствие, в случае обновления, вам необходимо изменить свой файл `_settings.scss` для включения любых найденных [в комментариях к релизу](https://github.com/zurb/foundation-sites/releases) изменений Sass.
 
-### Features
+### Возможности
 
-Here's an overview of what the ZURB Template can do:
+Далее перечислены возможности, которые предоставляет шаблон ZURB:
 
-* **Asset Copying**
+* **Копирование ресурсных файлов**
 
-  Gulp will copy anything out of the `src/assets` folder as-is to the `assets` folder of your final project. Note that Sass files, JavaScript files, and images are *not* **part of this copying process, as they have their own steps.**
+  Gulp копирует все файлы директории `src/assets` "как есть" в директорию  `assets` финального проекта. Учтите, что файлы Sass, JavaScript файлы и файлы изображений **не являются частью этого процесса копирования. Для них предусмотрены собственные шаги.**
   
 
-* **Page Compilation**
+* **Компиляция страниц**
 
-  The `src/` directory includes three folders used to create HTML pages: `pages/`, `layouts/`, and `partials/`. A flat file compiler called [Panini](panini.html) is used to process your project's various pages, inserting them into a common template, and injecting any HTML partials. This is done with a templating language called [Handlebars](http://handlebarsjs.com/).
+  Директория `src/` включает в себя три директории, использующиеся для создания HTML страниц: `pages/`, `layouts/`, и `partials/`. Компилятор статических файлов [Panini](panini.html) используется для обработки различных страниц проекта, встраивания их в общий шаблон проекта, и включения в них отдельных компонентов HTML. Это делается с помощью шаблонизатора [Handlebars](http://handlebarsjs.com/).
 
-  Panini has a dedicated page here in the docs that explains its various features. **[Learn more about Panini.](panini.html)**
+  В данной документации есть отдельная страница, посвященная возможностям Panini. **[Читать больше о Panini.](panini.html)**
 
-* **Sass Compilation**
+* **Компиляция Sass**
 
-  Sass is compiled to CSS using [Libsass](http://sass-lang.com/libsass) (via [node-sass](https://github.com/sass/node-sass)). The main Sass file is under `src/assets/scss/app.scss`, and imports Foundation and Motion UI. Any new Sass partials you create should be in this folder as well.
+  Sass компилируется в CSS с помощью [Libsass](http://sass-lang.com/libsass) (через [node-sass](https://github.com/sass/node-sass)). Главный файл Sass `src/assets/scss/app.scss` импортирует Foundation и Motion UI. Любые вновь создаваемые файлы Sass должны находиться в той же директории.
 
-  The CSS is output in the `nested` style, which is readable like normal CSS. A source map is also created, which can be read by developer tools such as the Chrome Web Inspector. When building for production, the CSS is also compressed with [clean-css](https://github.com/jakubpawlowicz/clean-css/issues), and pruned with [UnCSS](https://github.com/giakki/uncss). UnCSS scans the HTML of your pages and removes any CSS classes you didn't use.
+  CSS выводится в стиле `nested(вложенный)`, который читается как нормальный CSS. Также создается source map, которая может быть прочтена инструментами разработчика, например - Chrome Web Inspector. При сборке production версии, CSS также сжимается с помощью [clean-css](https://github.com/jakubpawlowicz/clean-css/issues), и обрезается [UnCSS](https://github.com/giakki/uncss). UnCSS сканирует HTML ваших страниц и удаляет все CSS классы, которые вы не используете.
 
-* **JavaScript Compilation**
+* **Компиляция JavaScript**
 
-  JavaScript is transpiled using [Babel](https://babeljs.io) (with the [es2015 plugin](https://babeljs.io/docs/plugins/#es2015)) so you can use [ES2015 features](https://babeljs.io/learn-es2015/).
-  The main Js file is under `src/assets/js/app.js`, and imports Foundation, jQuery and whatInput. You can import there installed packages and custom files, they will be included in the build.
+  JavaScript транспилируется с использованием [Babel](https://babeljs.io) (с плагином [es2015](https://babeljs.io/docs/plugins/#es2015)), благодаря чему вы можете использовать возможности [ES2015](https://babeljs.io/learn-es2015/).
+  Главный Js файл `src/assets/js/app.js` импортирует Foundation, jQuery и whatInput. Здесь вы можете импортировать другие пакеты JS или свои собственные JS файлы и они будут включены в сборку.
 
-  A source map is created that maps back to the original files. By default, the bundled `app.js` is uncompressed. When building for production, the file is run through [UglifyJS](https://github.com/mishoo/UglifyJS) for compression.
+  При компиляции дополнительно создаются файлы source map. По умолчанию, `app.js` собирается в несжатом виде. При сборке production версии, этот файл дополнительно сжимается с помощью [UglifyJS](https://github.com/mishoo/UglifyJS).
 
-  The whole bundling process is handled by [webpack](https://webpack.js.org): it manages all assets and dependencies for you and compiles them into one single file. If you're unfamiliar with imports or module bundling, check out:
-  * [What are ES6 imports](http://2ality.com/2014/09/es6-modules-final.html)
-  * [Beginner’s guide to webpack](https://medium.com/javascript-training/beginner-s-guide-to-webpack-b1f1a3638460)
-  * [Beginner’s guide to JavaScript Modules](https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc).
+  Весь процесс сборки осуществляется с помощью [webpack](https://webpack.js.org): он управляет всеми ресурсами и зависимостями и собирает их в единый файл.
 
-* **Image Compression**
+* **Сжатие изображений**
 
-  By default, all images are copied as-is from `assets/img` to your `dist` folder. When building for production, images are run through [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin) for compression. The plugin supports JPEG, PNG, SVG, and GIF files.
+  По умолчанию, все изображения копируются "как есть" из директории `assets/img` в соответствующую директорию `dist`. При сборке production версии, изображения сжимаются с помощью [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin). Этот плагин поддерживает JPEG, PNG, SVG, и GIF файлы.
 
 * **BrowserSync**
 
-  The template creates a [BrowserSync](http://www.browsersync.io/) server, which is at `http://localhost:8000`. Load this URL to see your compiled templates. While the server is running, any time you save a file, any pages you have open will automatically refresh, allowing you to see changes in real-time as you work.
+  Шаблон создает и запускает сервер [BrowserSync](http://www.browsersync.io/) по адресу `http://localhost:8000`. Пока данный сервер запущен, любое изменени файлов приводит к автоматическому обновлению открытой страницы в браузере, благодаря чему вы можете видеть изменения в режиме реального времени в процессе работы.
 
-* **Style Guide Creation**
+* **Руководство по Стилю**
 
-  Under `src/styleguide` are two files to create a style guide for your project. The style guide is generated using Style Sherpa, a small plugin created by ZURB.
+  В директории `src/styleguide` есть два файла для создания Руковдства по Стилю вашего проекта. Руководство по Стилю генерируется с помощью Style Sherpa, небольшим плагином созданным ZURB.
 
-Style Sherpa has a dedicated page here in the docs that explains its various features. **[Learn more about Style Sherpa.](style-sherpa.html)**
-
-### Tutorials
-
-- [What the ZURB Stack Does](https://foundation.zurb.com/learn/foundation-6-zurb-stack-part-1.html) via ZURB
-- [Overview of Foundation's ZURB Stack and File Structure](https://foundation.zurb.com/learn/foundation-6-stack-file-structure.html) via ZURB
-- [All about the ZURB Template](https://zendev.com/2017/09/05/front-end-development-kickstarter-zurb-template.html#scss) via Kevin Ball
+В данной документации есть отдельная страница, посвященная возможностям Style Sherpa. **[Читать больше о Style Sherpa.](style-sherpa.html)**
