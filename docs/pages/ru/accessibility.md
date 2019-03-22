@@ -1,51 +1,51 @@
 ---
-title: Accessibility
-description: Foundation for Sites is a fully-accessible framework. Here are some general guidelines to keep in mind as you make your pages accessible.
+title: Доступность
+description: Foundation for Sites - фреймворк, который имеет полную поддержку доступности для людей с ограниченными возможностями (далее - доступность). Здесь перечислены главные принципы, руководствуясь которыми вы сможете обеспечить доступность ваших страниц.
 ---
 
-In addition to the accessibility features built into Foundation's components, be sure to follow best practices for making your site more accessible.
+В дополнение к встроенным в компоненты Foundation возможностям доступности используйте и другие передовые практики, чтобы сделать ваши страницы более доступными.
 
 <div class="primary callout">
-  <p>Care about accessibility or want to contribute? Submit a Pull Request or get into the [conversation on GitHub](https://github.com/zurb/foundation-sites/labels/accessibility).</p>
+  <p>Хотите внести свой вклад в доступность? Отправьте Pull Request или участвуйте в [обсуждении на GitHub](https://github.com/zurb/foundation-sites/labels/accessibility).</p>
 </div>
 
-## Basic Principles
+## Базовые принципы
 
-- **Structure your document properly.** Use the right HTML tags for the job when marking up navigation, lists, links, controls, and so on.
-- **Label everything.** If a control or form element has no text label, add one. You can use the [visibility classes](visibility.html#accessibility) to hide labels visually while maintaining accessibility. Use the `alt` attribute on all images to describe what they are.
-- **Don't rely on purely visual cues.** The content of a page should make sense even if page is being read to the user, or if the user is colorblind and can't make use of color-based labeling.
-- **Make everything usable on a keyboard and mouse.** Lucky for you, all of our components work with keyboards, mice, and touch screens out of the box.
-
----
-
-## Types of Disabilities
-
-### Visual
-
-Visually-impaired users may have low vision or be completely blind. For low vision users, proper typographic contrast is important, both size and color. Foreground colors should stand out from background colors. You can use tools to calculate the contrast ratio of your foreground and background colors. The contrast ratio should at least be 1:4.5 for normal text and 3:1 for large text.
-Blind users consume the web by reading it using a [screen reader](https://en.wikipedia.org/wiki/Screen_reader). Screen readers read the content of a web page out loud, or write it out as Braille, using certain cues from the HTML to infer meaning.
-
-### Motor
-
-Users with motor disabilities may have trouble using a mouse, or don't use a mouse at all. For this reason, it's very important that your site is fully keyboard-accessible. Visually-impaired users also typically navigate websites using only their keyboard.
-
-When using only the keyboard, the <kbd>tab</kbd> key is the primary way to navigate through a page. However, most screen readers include many shortcut keys to skip around a page. For example, a screen reader can read every heading on a page, or every link, making it easier to find the right content on the page.
-
-More complex components like menus, tabs, or sliders can also typically be used with arrow keys, not just the <kbd>tab</kbd> keys. All of our JavaScript plugins provide advanced keyboard support by default.
-
-### Auditory
-
-If your site has video, provide captions so that users who are deaf or hard-of-hearing can properly view the content.
+- **Правильно структурируйте документ.** Используйте соответсвующие тэги HTML для разметки навигации, списков, ссылок, элементов управления и т.п.
+- **Метки везде.** Если элемент управления или элемент формы не имеет текстовой метки - добавьте ее. Вы можете использовать [классы видимости](visibility.html#accessibility) чтобы скрыть метки визуально, при этом сохраняя уровень доступности. Используйте аттрибут `alt` во всех изображениях для описания изображаемого.
+- **Не полагайтесь исключительно на цветовую разметку.** Содержимое страницы должно быть понятно и иметь смысл даже для людей имеющих нарушения цветового восприятия (дальтонизм).
+- **Любое действие на странице должно быть возможно сделать с клавиатурой и мышью.** К счастью, все компоненты Foundation работают с клавиатуры, мыши и сенсорных экранов из коробки.
 
 ---
 
-## Foundation and Accessibility
+## Типы ограничения возможностей людей
 
-All of Foundation's components are keyboard-accessible and screen reader-friendly. All of our code examples include the required accessibility hooks, but there may be instances where you, as the developer, need to fine-tune the specifics of how those hooks are used. Our JavaScript plugins will automatically add many required attributes to the HTML for you. Refer to each component's documentation to learn how to ensure your markup is screen reader-friendly.
+### Визуальные
 
-Foundation's CSS makes use of the library [what-input](https://github.com/ten1seven/what-input), which can detect the user's current input device and adjust CSS accordingly. We use it to disable outlines for mouse users, but not keyboard users, who need the outline to know what element on the page has focus.
+Пользователи с визуальными ограничениями могут плохо видеть или вообще не видеть. Для пользователей со слабым зрением в реализации контраста важен как размер так и цвет. Основной цвет должен контрастировать с фоновым цветом. Вы можете использовать инструменты для расчета коэффициента контрастности цвета текста и фона. Коэффициент контрастности должен быть не менее 1:4,5 для обычного текста и 3:1 для больших текстов.
+Слепые пользователи просматривают страницы с использованием специальных программ или устройств чтения с экрана - [скрин-ридеров](https://ru.wikipedia.org/wiki/Экранное_считывающее_устройство). Скрин-ридеры читают содержимое страницы вслух или преобразуют его в чтение на основе шрифта Брайля используя специальную разметку HTML.
 
-If you're using the Sass version of Foundation, you can use this mixin to enable the feature on your own components:
+### Моторные
+
+Люди могут иметь физические ограничения для использования мыши. По этой причине, очень важно, чтобы функциональность вашего сайта была также полностью доступна только при использовании клавиатуры . Слабовидящие пользователи также, как правило, ориентируются на сайтах, используя только клавиатуру.
+
+При использовании клавиатуры, клавиша <kbd>tab</kbd> является основным способ навигации по странице. В то же время, большинство скрин-ридеров включают множество сочетаний клавиш, чтобы перемещаться по странице. Например, скрин-ридер может читать все заголовки и ссылки на странице, что существенно облегчает навигацию.
+
+Более сложные компоненты - такие как меню, табы или слайдеры для навигации могут использовать не только клавишу <kbd>tab</kbd>, но и клавишы со стрелками. Все плагины JavaScript от Foundation обеспечивают расширенную поддержку клавиатуры по умолчанию.
+
+### Слуховые
+
+Если на вашем сайте есть видео, снабдите его субтитрами, что обеспечит свободный доступ к информации - пользователям с нарушением слуха.
+
+---
+
+## Foundation и Доступность
+
+Все компоненты Foundation имеют расширенную поддержку клавиатуры и корректно работают со скрин-ридерами. Все примеры кода содержат необходимую разметку доступности, но могут быть случаи, когда вы, как разработчик, должны уточнить особенности использования этой разметки. Плагины JavaScript от Foundation автоматически добавляют много необходимых аттрибутов в HTML. В документации каждого компонента имеется описание разметки, необходимой для скрин-ридеров.
+
+CSS в Foundation построен с использованием библиотеки [what-input](https://github.com/ten1seven/what-input), которая может определять текущие устройства ввода пользователя и соответственно подстраивать CSS. Например, это используется для отключения контуров для пользователей мыши, и включения их для пользователей только клавиатуры, которым необходимо определять - какой элемент на странице имеет фокус.
+
+Если вы используете Sass версию Foundation, вы можете включить следующий миксин для реализации этих возможностей в своих компонентах:
 
 ```scss
 .element {
@@ -53,25 +53,3 @@ If you're using the Sass version of Foundation, you can use this mixin to enable
   // ...
 }
 ```
-
----
-
-## Learn More
-
-### Resources
-
-- [WCAG 2.0 Guide](http://www.w3.org/TR/UNDERSTANDING-WCAG20/)
-- [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
-- [w3.org Introduction to Accessibility](http://www.w3.org/WAI/intro/accessibility.php)
-- [Section 508 government requirements](http://www.section508.gov/)
-- [WebAIM certification and training](http://webaim.org/)
-- [Web Accessibility Checklist](http://a11yproject.com/checklist.html)
-
-### Tools
-
-- [Tenon accessibility checker](https://tenon.io/index.php)
-- [WAVE Chrome plugin - free accessibility checker](http://wave.webaim.org)
-- [Color Contrast Checker](http://webaim.org/resources/contrastchecker)
-- [ChromeVox screen reader plugin for Chrome](http://www.chromevox.com)
-- [JAWS screen reader for Windows](http://www.freedomscientific.com/Products/Blindness/Jaws)
-- [NVDA screen reader for Windows - Free](http://www.nvaccess.org/download/)
