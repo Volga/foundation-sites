@@ -1,46 +1,45 @@
 ---
-title: Right-to-Left Support
-description: Foundation can easily adapt its components to work with languages that read from right to left.
-video: 'TPz2Uzr4urE'
+title: Поддержка письма справа налево (RTL)
+description: В Foundation легко адаптировать компоненты для поддержки языков с направлением письма справа налево.
 ---
 
 ## HTML
 
-You'll need to make a few changes to your markup to get the Javascript components working nice and smooth. In the `<html>` tag, you'll need to add a `dir` attribute with a value of `rtl`. Here's what your `<html>` tag should look like:
+Вам потребуется сделать несколько изменений в вашей разметке, чтобы получить верно работающие компоненты JavaScript. В тэг `<html>` необходимо добавить аттрибут `dir` со значением `rtl`. Вот как должен выглядеть тэг `<html>`:
 
 ```html
-<!-- This example is for a right-to-left Arabic layout -->
+<!-- Это пример для Арбаского языка -->
 <html class="no-js" lang="ar" dir="rtl">
 ```
 
-### Language Code
+### Код языка
 
-You'll need to change your lang attribute value to match your language. Here's a handy list of common right-to-left languages and their html codes.
+Необходимо также изменить значение аттрибута `lang` на соответствующее необходимому языку. Вот удобный список некоторых языков RTL с их кодами:
 
-- **Arabic:** `ar`
-- **Chinese:** `zh`
-- **Farsi:** `fa`
-- **Hebrew:** `he`, `iw`
-- **Japanese:** `ja`
-- **Urdu:** `ur`
-- **Yiddish:** `yi`, `ji`
+- **Арабский:** `ar`
+- **Китайский:** `zh`
+- **Фарси:** `fa`
+- **Иврит:** `he`, `iw`
+- **Японский:** `ja`
+- **Урду:** `ur`
+- **Идиш:** `yi`, `ji`
 
-View of a [full list of language codes](http://www.loc.gov/standards/iso639-2/php/code_list.php) on the website of the Library of Congress.
-
----
-
-## CSS Download
-
-If you use a CSS version of Foundation (the ones you can find on the [download page](http://foundation.zurb.com/sites/download)), you'll need to create a custom download that includes RTL CSS instead of LTR. Just select "Right-to-left" under the Text Direction section of the customizer.
+Смотрите [полный список языков с их кодами](http://www.loc.gov/standards/iso639-2/php/code_list.php) на сайте Библиотеки Конгресса.
 
 ---
 
-## Sass Configuration
+## Скачивание CSS
 
-If you're using the Sass version of Foundation, open your project's [settings file](sass.html#the-settings-file) (`settings.scss`) and change this variable in the Global section:
+Если вы используете CSS версию Foundation (которые можно найти на [странице скачивания](http://foundation.zurb.com/sites/download)), вам необходимо создать версию для скачивания, которая включает в себя поддержку RTL CSS, а не LTR. Просто выберите "Right-to-left" в разделе Направление Текста конструктора.
+
+---
+
+## Конфигурация Sass
+
+Если вы используете Sass версию Foundation, откройте [файл настроек](sass.html#the-settings-file) (`settings.scss`) своего проекта и измените переменную в Глобальной секции:
 
 ```scss
 $global-text-direction: rtl;
 ```
 
-This will convert the framework's components to RTL format.
+Это изменение сконвертирует компоненты фреймворка для поддержки RTL формата.
