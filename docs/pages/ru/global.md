@@ -1,90 +1,89 @@
 ---
-title: Global Styles
-description: Our global CSS includes helpful resets to ensure consistent styling across browsers.
-video: 'nEgHk2wmMjU'
+title: Глобальные стили
+description: CSS Foundation включает в себя ресеты, которые обеспечивают кроссбраузерную работу стилей.
 sass: scss/_global.scss
 ---
 
-## Font Sizing
+## Размеры шрифтов
 
-The default font size is set to 100% of the browser style sheet, usually 16 pixels. This ensures compatibility with browser-based text zoom or user-set defaults. If you're using the Sass version of Foundation, edit the `$global-font-size` variable to change the base font size. This can be a percentage value, or a pixel value.
+Размер основного шрифта по умолчанию установлен в 100% основного браузерного шрифта, который обычно составляет 16 пикселей. Это обеспечивает совместимость с браузерным зуммированием или собственными установками пользователей. Если вы используете Sass версию Foundation, вы можете изменить размер базового шрифта переопределив переменную `$global-font-size`. Значение может устанавливаться в процентах или пикселях.
 
 ---
 
-## Colors
+## Цвета
 
-Foundation has an accessible default color palette. The primary color is used for interactive elements, such as links and buttons. The secondary, success, warning, and alert colors are used to give more context to UI elements and actions.
+Foundation по умолчанию имеет удобную палитру цветров. Приоритетный цвет (primary) используется для интерактивных элементов, таких как ссылки и кнопки. Вторичный (secondary), успешный (success), предупреждающий (warning) и уведомляющий (alert) цвета используются для обеспечения большего контекста для элементов и действий интерфейса.
 
 <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-5">
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-primary"></div>
-      <p>Primary</p>
+      <p>Приоритетный (primary)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-secondary"></div>
-      <p>Secondary</p>
+      <p>Вторичный (secondary)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-success"></div>
-      <p>Success</p>
+      <p>Успешный (success)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-warning"></div>
-      <p>Warning</p>
+      <p>Предупреждающий (warning)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-alert"></div>
-      <p>Alert</p>
+      <p>Уведомляющий (alert)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-white"></div>
-      <p>White</p>
+      <p>Белый (white)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-light-gray"></div>
-      <p>Light Gray</p>
+      <p>Светло-серый (light gray)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-medium-gray"></div>
-      <p>Medium Gray</p>
+      <p>Серый (medium gray)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-dark-gray"></div>
-      <p>Dark Gray</p>
+      <p>Темно-серый (dark gray)</p>
     </div>
   </div>
   <div class="cell">
-    <div class="docs-color-block">
+    <div class="docs-color-block text-wrap">
       <div class="docs-color-block-black"></div>
-      <p>Black</p>
+      <p>Черный (black)</p>
     </div>
   </div>
 </div>
 
 ---
 
-### Changing the Color Palette
+### Изменение цветовой палитры
 
-If you're using the Sass version of Foundation, you can easily change the color palette by editing the variables in your settings file.
+Если вы используете Sass версию Foundation, вы легко можете изменить цветовую палитру переопределив переменные в вашем фале настроек.
 
-The semantic colors (primary, secondary, success, warning, and alert) can be changed in the `$foundation-palette` map. The keys in this map are referenced by various settings to style components and output alternate class names.
+Семантические цвета (primary, secondary, success, warning, и alert) могут быть изменены в карте `$foundation-palette`. Ключи в этой карте используются для стилизации различных компонентов и конечных классов.
 
 ```scss
 $foundation-palette: (
@@ -97,10 +96,10 @@ $foundation-palette: (
 ```
 
 <div class="warning callout">
-  <p>If you remove a default key from `$foundation-palette`, be sure to edit any variables in your settings file that reference that color.</p>
+  <p>Если вы удалите дефолтный ключ из карты `$foundation-palette`, вам придется внести изменения в различные переменные Sass, использующие данный ключ.</p>
 </div>
 
-The named colors (white, light gray, medium gray, dark gray, and black) can be changed in their respective variables
+Именованные цвета (white, light gray, medium gray, dark gray, и black) могут быть изменены в соответствующих переменных
 
 ```scss
 $light-gray: #e6e6e6;
@@ -110,7 +109,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 ```
 
-The line `@include add-foundation-colors;` in your settings file allows you to use the following Sass variables to reference *default colors* from the palette:
+Строка `@include add-foundation-colors;` в вашем файле настроек позволит вам использовать соответствующие переменные, ссылающиеся на *цвета по умолчанию* из палитры:
 
 - `$primary-color`
 - `$secondary-color`
@@ -118,9 +117,9 @@ The line `@include add-foundation-colors;` in your settings file allows you to u
 - `$warning-color`
 - `$alert-color`
 
-You can also use Foundation's `get-color()` function to reference *any color* from the palette. This function gives you access to custom colors you've added to the palette.
+Вы также можете использовать функцию Foundation `get-color()`, чтобы сослаться на *любой цвет* из палитры. Эта функция также дает доступ к пользовательским цветам, которые вы определили в палитре.
 
 ```scss
-// Create a variable for my custom color.
+// Создание переменной собственного цвета
 $custom-color: get-color(custom);
 ```
