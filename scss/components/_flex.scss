@@ -6,11 +6,11 @@
 /// @group Flexbox Utilities
 ////
 //
-/// Default value for the count of source ordering`
+/// Значение по умолчанию для счетчика порядка следования (свойство order)
 /// @type Number
 $flex-source-ordering-count: 6 !default;
 
-/// Quickly disable/enable Responsive breakpoints for Vanilla Flex Helpers.
+/// Быстрое включение/выключение точек останова для flex хелперов.
 /// @type Boolean
 $flexbox-responsive-breakpoints: true !default;
 

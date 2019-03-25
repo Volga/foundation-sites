@@ -1,21 +1,20 @@
 ---
-title: Flexbox Mode
-description: For browsers with cutting-edge support, some of Foundation's key components can be converted to flexbox.
-video: 'KxafSdyTCIg'
+title: Режим Flexbox
+description: Для браузеров с поддержкой передовых технологий, некоторые компоненты Foundation могут быть преобразованы в компоненты с использованием flexbox.
 sass:
   - scss/components/_flex.scss
   - scss/util/_flex.scss
 ---
 
-## Flexbox Mode
+## Режим Flexbox
 
-Foundation components use a combination of floats, vertical alignment, table cells, and various other CSS hacks to get layouts looking right. These days though, there's a better way... if you are happy with the below browser support!
+Компоненты Foundation используют комбинацию плавающих элементов, вертикального выравнивания, таблиц и различных других хаков CSS для получения необходимого внешнего вида. Но в наши дни есть более эффективный способ, если только у вас нет какой-то причины в поддержке интерфейса для устаревших версий браузеров.
 
-Enabling **flexbox mode** replaces those hacks with flexbox properties, streamlining how layouts are made, and making sizing and alignment of elements much easier.
+Включение **режима flexbox** заменяет все эти хаки использованием свойств flex контейнеров, что делает макеты более упорядоченными, и методы определения размеров и выравнивания элементов становятся намного проще.
 
-Flexbox mode is only supported in these browsers:
+Режим Flexbox поддерживается в следующих браузерах:
 
-- The latest Chrome and Firefox
+- Последние версии Chrome и Firefox
 - Safari 6+
 - IE/Edge 10+
 - iOS 7+
@@ -23,17 +22,17 @@ Flexbox mode is only supported in these browsers:
 
 ---
 
-## Enabling Flexbox Mode
+## Включение режима Flexbox
 
-If you're using the CSS version of Foundation, you can generate a <a href="https://foundation.zurb.com/sites/download">custom download of Foundation</a> with flexbox mode enabled. If you're using the Sass version of Foundation, you can enable flexbox mode two ways:
+Если вы используете CSS версию Foundation, вы можете сгенерировать <a href="https://foundation.zurb.com/sites/download">свою сборку Foundation</a> с включенным режимом flexbox. Если вы используете Sass версию Foundation, вы можете включить режим flexbox двумя путями:
 
-If you use the `foundation-everything()` mixin in your main Sass file, pass in the parameter `true` to enable flexbox mode.
+Если вы используете миксин `foundation-everything()` в вашем главном Sass файле, передайте ему параметр `true` для включения режима flexbox.
 
 ```scss
 @include foundation-everything(true);
 ```
 
-If you included each component manually (like our starter projects do), open your settings file (basic template: scss/_settings.scss, ZURB template: src/assets/scss/_settings.scss) and set `$global-flexbox` to `true`, and remove the `@include` for the float grid and replace it with the one for the flex grid, along with the helper classes (basic template: scss/app.scss, ZURB template: src/assets/scss/app.scss):
+Если вы импортируете каждый компонент отдельно (как делают шаблоны наших стартовых проектов), откройте ваш файл настроек (базовый шаблон: scss/_settings.scss, шаблон ZURB: src/assets/scss/_settings.scss), установите значение переменной `$global-flexbox` в `true`, удалите `@include` для плавающей (float) сетки и замените на `@include` для flex сетки, а также для вспомогательных классов (базовый шаблон: scss/app.scss, шаблон ZURB: src/assets/scss/app.scss):
 
 ```scss
 $global-flexbox: true;
@@ -45,16 +44,16 @@ $global-flexbox: true;
 
 ---
 
-## Supported Components
+## Поддерживаемые компоненты
 
-Besides the flex grid, these components have flexbox modes:
+Помимо самой flex сетки, режим flexbox поддерживают следующие компоненты:
 
-- [Button group](button-group.html)
-- [Input group - (Forms)](forms.html#inline-labels-and-buttons)
-- [Menu](menu.html)
-- [Top bar](top-bar.html)
-- [Media object](media-object.html)
-- [Title bar](off-canvas.html#title-bar)
-- [Card](card.html)
+- [Группа кнопок (Button group)](button-group.html)
+- [Группа ввода (Input group) - (Формы)](forms.html#inline-labels-and-buttons)
+- [Меню](menu.html)
+- [Топ-бар (Top bar)](top-bar.html)
+- [Медиа объекты (Media object)](media-object.html)
+- [Тайтл-бар (Title bar)](off-canvas.html#title-bar)
+- [Карточка (Card)](card.html)
 
-In general, all of the components work exactly the same. However, a few of them require slight changes to CSS classes used to work properly. Refer to the documentation for each to find out what's different.
+В основной части, в режиме flexbox, все компоненты работают также как в основном. Однако, некоторые из них требуют небольших изменений классов CSS. Обратитесь к документации каждого из них, чтобы узнать, что именно меняется.

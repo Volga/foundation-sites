@@ -25,15 +25,15 @@ $-zf-flex-direction: (
   'column-reverse': column-reverse,
 );
 
-/// Enables flexbox by adding `display: flex` to the element.
+/// Включает flexbox путем добавления `display: flex` в элемент.
 @mixin flex {
   display: flex;
 }
 
-/// Horizontally or vertically aligns the items within a flex container.
+/// Горизонтальное или вертикальное выравнивание элементов внутри flex контейнера.
 ///
-/// @param {Keyword} $x [null] - Horizontal alignment to use. Can be `left`, `right`, `center`, `justify`, or `spaced`. Or, set it to `null` (the default) to not set horizontal alignment.
-/// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
+/// @param {Keyword} $x [null] - Горизонтальное выравнивание. Может принимать значения `left`, `right`, `center`, `justify` или `spaced`. Или установлено в `null` (по умолчанию), что однозначно не установленному горизонтальному выравниванию.
+/// @param {Keyword} $y [null] - Вертикальное выравнивание. Может принимать значения `top`, `bottom`, `middle` или `stretch`. Или установлено в `null` (по умолчанию), что однозначно не установленному вертикальному выравниванию.
 @mixin flex-align($x: null, $y: null) {
   @if $x {
     @if map-has-key($-zf-flex-justify, $x) {
@@ -57,9 +57,9 @@ $-zf-flex-direction: (
   align-items: $y;
 }
 
-/// Vertically align a single column within a flex row. Apply this mixin to a flex column.
+/// Вертикальное выравнивание отдельной колонки внутри flex строки. Применяйте этот миксин к flex колонке.
 ///
-/// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
+/// @param {Keyword} $y [null] - Вертикальное выравнивание. Может принимать значения `top`, `bottom`, `middle` или `stretch`. Или установлено в `null` (по умолчанию), что однозначно не установленному вертикальному выравниванию.
 @mixin flex-align-self($y: null) {
   @if $y {
     @if map-has-key($-zf-flex-align, $y) {
@@ -73,18 +73,18 @@ $-zf-flex-direction: (
   align-self: $y;
 }
 
-/// Changes the source order of a flex child. Children with lower numbers appear first in the layout.
-/// @param {Number} $order [0] - Order number to apply.
+/// Изменение порядка следования flex потомков. Потомки с более низким значением следуют в макете сначала.
+/// @param {Number} $order [0] - Номер по порядку.
 @mixin flex-order($order: 0) {
   order: $order;
 }
 
-/// Change flex-direction
-/// @param {Keyword} $direction [row] - Flex direction to use. Can be
-///   - row (default): same as text direction
-///   - row-reverse: opposite to text direction
-///   - column: same as row but top to bottom
-///   - column-reverse: same as row-reverse top to bottom
+/// Изменение flex-direction
+/// @param {Keyword} $direction [row] - Flex направление. Может принимать значения
+///   - row (по умолчанию): такое же как у текста
+///   - row-reverse: противоположное тексту
+///   - column: то же что и row, но по вертикали
+///   - column-reverse: то же что и row-reverse, но по вертикали
 @mixin flex-direction($direction: row) {
   flex-direction: $direction;
 }
